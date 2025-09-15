@@ -117,3 +117,164 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
+
+/* ===== Responsive tweaks ===== */
+
+main {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* <= 1024px (didesnės planšetės ir maži laptopai) */
+@media (max-width: 1024px) {
+  header {
+    height: 30vh;
+  }
+
+  .left,
+  .right {
+    width: 44rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .number {
+    font-size: 5rem;
+    width: 13rem;
+  }
+
+  .right {
+    font-size: 1.8rem;
+  }
+}
+
+/* <= 768px (planšetės) */
+@media (max-width: 768px) {
+  header {
+    height: 28vh;
+  }
+
+  main {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .number {
+    font-size: 4.8rem;
+    width: 12rem;
+    padding: 2.4rem 0;
+  }
+
+  .guess {
+    font-size: 4rem;
+    width: 22rem;
+    padding: 2rem;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.6rem 2.4rem;
+  }
+
+  .message {
+    margin-bottom: 4rem;
+  }
+}
+
+/* <= 480px (telefonai) */
+@media (max-width: 480px) {
+  header {
+    height: auto;
+    padding: 2rem 1rem 3rem;
+    border-bottom-width: 5px;
+  }
+
+  h1 {
+    position: static;
+    width: auto;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .between,
+  .again {
+    position: static;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0.25rem 0.5rem 1rem 0;
+  }
+
+  .number {
+    position: static;
+    transform: none;
+    margin: 1.5rem auto 0;
+    font-size: 4rem;
+    width: 10rem;
+    padding: 2rem 0;
+  }
+
+  main {
+    padding: 1.5rem 1rem 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .right {
+    font-size: 1.6rem;
+  }
+
+  .guess {
+    font-size: 3.2rem;
+    width: 18rem;
+    padding: 1.6rem;
+    margin-bottom: 2rem;
+    border-width: 3px;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    padding: 1.2rem 1.8rem;
+  }
+
+  .message {
+    margin-bottom: 3rem;
+    height: auto;
+    min-height: 2.4rem;
+  }
+}
+
+/* Labai siauri ekranai / senesni telefonai */
+@media (max-width: 360px) {
+  html {
+    font-size: 56.25%;
+  } /* ~9px bazė vietoje 10px (62.5%) */
+  .guess {
+    width: 16rem;
+    font-size: 2.8rem;
+  }
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 1.4rem;
+  }
+}
